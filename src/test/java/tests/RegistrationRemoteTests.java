@@ -12,15 +12,6 @@ public class RegistrationRemoteTests extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
 
-    @AfterEach
-    void addAttachments() {
-        Attach.screenshotAs("Last screenshot");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
-        Attach.addVideo();
-
-    }
-
     @Test
     @Tag("demoqa")
     void fillFormTest() {
