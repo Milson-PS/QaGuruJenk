@@ -15,6 +15,7 @@ public class RegistrationPage {
             genderWrapper = $("#genterWrapper"),
             userNumberInput = $("#userNumber"),
             calendarInput = $("#dateOfBirthInput"),
+            pictureLoader = $("#uploadPicture"),
             subjectsInput = $("#subjectsInput"),
             hobbiesClick = $("#hobbiesWrapper"),
             uploadPicture = $("#uploadPicture"),
@@ -78,6 +79,13 @@ public class RegistrationPage {
 
     public RegistrationPage setHobbies(String value) {
         hobbiesClick.$(byText(value)).click();
+        return this;
+    }
+
+
+    public RegistrationPage uploadPicture(String path) {
+        pictureLoader.uploadFromClasspath(path);
+
         return this;
     }
 
